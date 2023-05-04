@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class OpenByHand : MonoBehaviour
 {
     public TMP_Dropdown dropdown;
-
+    public Button[] Buttons;
     void Start()
     {
         
@@ -38,6 +39,21 @@ public class OpenByHand : MonoBehaviour
             }
             // Set the new value
             dropdown.value = currentValue;
+        }
+
+        if (Input.GetKeyDown(KeyCode.W)) {
+            Debug.Log("button 0 clicked");
+            Buttons[0].onClick.Invoke();
+
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("button 1 clicked");
+            Buttons[1].onClick.Invoke();
+
+
         }
     }
 }

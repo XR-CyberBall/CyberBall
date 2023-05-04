@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+using Assets._scripts.Entities;
 
-    public enum Menu_Animation
+public enum Menu_Animation
     {
         PLAYER_COLLIDE_WITH_THE_WELL
     }
@@ -17,10 +18,15 @@ using System;
     // Start is called before the first frame update
 
 
-    public GameObject[] _list_Panels;
+    public Navigated_Pannel[] _list_Panels;
     public GameObject _menuPanel;
-     public C_GameSettings Settings ;
-        public static MenuManager Instance { get; private set; }
+    public C_GameSettings Settings ;
+
+   
+    
+    private static GameObject[] _Naviagtor;
+
+    public static MenuManager Instance { get; private set; }
 
         
         private Animator animator;
@@ -91,6 +97,8 @@ using System;
     {
      
         Settings.Set_Settings_view();
+
+
         Debug.Log("Settings are updated");
 
     }
@@ -101,10 +109,45 @@ using System;
 
     }
 
+    public void DesactivatePanels(Enums.Navs_Lanels label)
+    {
+
+        foreach (Navigated_Pannel panel in _list_Panels)
+        {
+            if (panel.ID == label)
+            {
+                panel.Desactivate(false);
+
+            }
+            else
+            {
+                panel.Desactivate();
+
+            }
+            
+
+        }
+
+
+    }
+    public void Load_all_panels()
+    {
+     
+
+    }
+
+ 
 
     private void OnDestroy()
     {
         Save_Nenu_Manager_Setting();
+    }
+
+   public void Navigate_between_Panels()
+    {
+        
+
+
     }
 
 }

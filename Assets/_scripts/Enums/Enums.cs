@@ -9,4 +9,14 @@ public class Enums
     {
         ITERATION
     }
+
+    public enum Navs_Lanels
+    {
+
+        NAV_CALIBRATION,
+        NAV_GLOVES_SETTINGS,
+        NAV_PLAYER_SETTINGS,
+        GAME_SETTINGS
+
+    }
 }
