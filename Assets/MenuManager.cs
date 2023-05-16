@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 
 using Assets._scripts.Entities;
+using UnityEngine.SceneManagement;
 
 public enum Menu_Animation
     {
@@ -20,6 +21,10 @@ public enum Menu_Animation
 
     public Navigated_Pannel[] _list_Panels;
     public GameObject _menuPanel;
+    public C_Feedback Feedback;
+    /// <summary>
+    /// Gamge setting that is responsible on saving the preferences 
+    /// </summary>
     public C_GameSettings Settings ;
 
    
@@ -93,22 +98,33 @@ public enum Menu_Animation
        
     }
 
+    /// <summary>
+    /// Load the  view with saved preferences 
+    /// </summary>
     public void Load_MenuManager_Settings()
     {
      
         Settings.Set_Settings_view();
-
+        Feedback.LoadSliderValues();
 
         Debug.Log("Settings are updated");
 
     }
 
+    /// <summary>
+    /// Save the panel settings  
+    /// </summary>
     public void Save_Nenu_Manager_Setting()
     {
         Settings.Update_Settings();
+        Feedback.SaveSliderValues();
 
     }
 
+    /// <summary>
+    /// Desactivate the panel
+    /// </summary>
+    /// <param name="label"> The Label is ID assdigned to each panel</param>
     public void DesactivatePanels(Enums.Navs_Lanels label)
     {
 
@@ -127,26 +143,24 @@ public enum Menu_Animation
             
 
         }
-
-
     }
-    public void Load_all_panels()
+    
+
+
+    private void OnDestroy()
     {
-     
+        Debug.Log("debug from 152 menu manager");
+        Save_Nenu_Manager_Setting();
+
 
     }
 
  
 
-    private void OnDestroy()
-    {
-        Save_Nenu_Manager_Setting();
-    }
-
-   public void Navigate_between_Panels()
+    public void Change_The_Scene(Enums.Scenes_ID Scene_ID)
     {
         
-
+        SceneManager.LoadScene(Scene_ID.ToString());
 
     }
 

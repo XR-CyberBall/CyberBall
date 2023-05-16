@@ -17,7 +17,6 @@ public class PanelCloseOpen : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(" OnTriggerEnter hola1");
         switch (other.tag)
         {
             case "Player":
