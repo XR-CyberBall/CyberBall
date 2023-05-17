@@ -105,7 +105,7 @@ public enum Menu_Animation
     {
      
         Settings.Set_Settings_view();
-        Feedback.LoadSliderValues();
+        Feedback.LoadSliderValues_View();
 
         Debug.Log("Settings are updated");
 

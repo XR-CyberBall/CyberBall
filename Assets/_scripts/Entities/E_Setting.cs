@@ -1,13 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 
-
-public class E_Setting 
+namespace E_Settings
 {
-   
 
-   
-        public int itterationNumber;
 
-  
+
+
+    [System.Serializable]
+    public class SliderValuesWrapper
+    {
+        public List<SliderValue> sliderValuesList;
+    }
+
+    [System.Serializable]
+    public class SliderValue
+    {
+        public string fingerID;
+        public float sliderValue;
+    }
+   
+    public class Game_Settings
+    {
+     public   int Irretation;
+    }
+
 }

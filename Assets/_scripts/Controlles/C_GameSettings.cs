@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using E_Settings;
 
 public class C_GameSettings:MonoBehaviour
 {
@@ -37,13 +37,13 @@ public class C_GameSettings:MonoBehaviour
     /// </summary>
     /// <returns></returns>
   
-    public   E_Setting Get_Settings() 
+    public Game_Settings Get_Settings() 
     {
 
         int Irretation = PlayerPrefs.GetInt(Enums.PrefKeys.ITERATION.ToString(),0);
-       
-        E_Setting Est = new E_Setting();
-        Est.itterationNumber = Irretation;
+
+        Game_Settings Est = new Game_Settings();
+        Est.Irretation = Irretation;
         return Est;
 
     }
@@ -57,7 +57,7 @@ public class C_GameSettings:MonoBehaviour
 
     {
 
-        _Dropdown__GameIteration.value = Get_Settings().itterationNumber;
+        _Dropdown__GameIteration.value = Get_Settings().Irretation;
     }
   
 
