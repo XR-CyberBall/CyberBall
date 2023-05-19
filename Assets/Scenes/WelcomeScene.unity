@@ -7626,6 +7626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83a3657308c74146994af9fbc4dd79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testFbb: 0
+  testVib: 0
 --- !u!1 &389449873
 GameObject:
   m_ObjectHideFlags: 0
@@ -9191,7 +9193,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 471818212}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1067800304}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: test_Vib
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &471818212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19280,6 +19294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1067800303}
   - component: {fileID: 1067800306}
+  - component: {fileID: 1067800310}
   - component: {fileID: 1067800304}
   - component: {fileID: 1067800305}
   - component: {fileID: 1067800307}
@@ -19397,6 +19412,7 @@ MonoBehaviour:
   - {fileID: 1855848672}
   - {fileID: 1006636895}
   - {fileID: 640091379}
+  config_Gloves: {fileID: 1067800310}
 --- !u!114 &1067800309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19415,6 +19431,21 @@ MonoBehaviour:
   - {fileID: 1777901208}
   - {fileID: 1451622822}
   - {fileID: 510479392}
+  config_Gloves: {fileID: 1067800310}
+--- !u!114 &1067800310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067800302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83a3657308c74146994af9fbc4dd79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testFbb: 0
+  testVib: 0
 --- !u!1 &1070209343
 GameObject:
   m_ObjectHideFlags: 0
@@ -20731,7 +20762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Test VIB
+  m_text: Stop VIB
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28810,7 +28841,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1505152267}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1067800304}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: stop_Vib
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1505152267
 MonoBehaviour:
   m_ObjectHideFlags: 0

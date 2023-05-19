@@ -167,7 +167,20 @@ public enum Menu_Animation
         SceneManager.LoadScene(Scene_ID.ToString());
 
     }
+      public void stop_Vib()
+    {
 
+        Feedback_fbb.stop_feedback(GLOVES_FEEDBACK_PREF.VIBRATION_FEEDBACK);
+
+    }
+
+    public void test_Vib()
+    {
+        Feedback_fbb.test_FeedBack(GLOVES_FEEDBACK_PREF.VIBRATION_FEEDBACK);
+
+    }
+
+  
 }
 
 

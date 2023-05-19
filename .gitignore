@@ -71,8 +71,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Exclude the Assets/_Scripts directory
-!/Assets/_Scripts/
-/Assets/_Scripts/*
+
 
 /UpgradeLog.htm
 /ProjectSettings
