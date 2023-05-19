@@ -170,17 +170,26 @@ public enum Menu_Animation
       public void stop_Vib()
     {
 
-        Feedback_fbb.stop_feedback(GLOVES_FEEDBACK_PREF.VIBRATION_FEEDBACK);
+        Feedback_vib.stop_feedback(GLOVES_FEEDBACK_PREF.VIBRATION_FEEDBACK);
 
     }
 
     public void test_Vib()
     {
-        Feedback_fbb.test_FeedBack(GLOVES_FEEDBACK_PREF.VIBRATION_FEEDBACK);
+        Feedback_vib.test_FeedBack(GLOVES_FEEDBACK_PREF.VIBRATION_FEEDBACK);
 
     }
 
-  
+  public void test_fbb()
+    {
+        Feedback_fbb.test_FeedBack(GLOVES_FEEDBACK_PREF.FBB_FEEDBACK);
+    }
+    public void stop_fbb()
+    {
+
+        Feedback_fbb.stop_feedback(GLOVES_FEEDBACK_PREF.FBB_FEEDBACK);
+
+    }
 }
 
 

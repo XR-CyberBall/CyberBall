@@ -29,7 +29,7 @@ public class C_Gloves_configuration:MonoBehaviour
 
      foreach(HapticGlove glove in Gloves)
         { foreach (KeyValuePair<Finger, float> item in  Fingers) {
-                SGCore.Nova.NovaGlove.GetNovaGloves()[0].QueueFFBLevel(item.Key, item.Value);
+                glove.QueueFFBLevel(item.Key, item.Value);
 
             }
         }
@@ -42,11 +42,36 @@ public class C_Gloves_configuration:MonoBehaviour
         {
             foreach (KeyValuePair<Finger, float> item in Fingers)
             {
-                Debug.Log("Iam in vib " + item.Key.ToString());
-                glove.QueueVibroLevel(Finger.Index, 0.5f);
+                Debug.Log("Iam in vib " + item.Key.ToString()+" val "+item.Value);
+                glove.QueueVibroLevel(item.Key, item.Value);
 
 
             }
+            glove.SendHaptics();
+        }
+
+    }
+    public void Stop_Vib()
+    {
+
+        this.testVib = false;
+        HapticGlove[] gloves = Connected_HapticsGloves();
+        foreach (HapticGlove glove in gloves)
+        {
+            glove.StopVibrations();
+        }
+
+
+    } 
+
+   public void Stop_fbb()
+    {
+        this.testFbb = false;
+
+        HapticGlove[] gloves = Connected_HapticsGloves();
+        foreach (HapticGlove glove in gloves)
+        {
+            glove.StopHaptics();
         }
     }
     public void Handle_Fbb()
@@ -73,9 +98,9 @@ public class C_Gloves_configuration:MonoBehaviour
         {
 
             Handle_Vib();
+           
 
         }
-        SGCore.Nova.NovaGlove.GetHapticGloves()[0].SendHaptics();
     }
 
 

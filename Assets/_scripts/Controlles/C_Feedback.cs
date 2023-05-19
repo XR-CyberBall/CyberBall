@@ -69,14 +69,14 @@ public class C_Feedback : MonoBehaviour
 
         if (feedback.Equals(GLOVES_FEEDBACK_PREF.VIBRATION_FEEDBACK))
         {
-            config_Gloves.testVib = false;
+            config_Gloves.Stop_Vib();
 
 
         }
-         if(feedback.Equals(GLOVES_FEEDBACK_PREF.FBB_FEEDBACK))
+        if (feedback.Equals(GLOVES_FEEDBACK_PREF.FBB_FEEDBACK))
         {
 
-            config_Gloves.testFbb = false;
+            config_Gloves.Stop_fbb();
         }
     }
 
