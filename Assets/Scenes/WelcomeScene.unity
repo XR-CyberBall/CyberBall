@@ -5687,7 +5687,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -389, y: 201}
+  m_AnchoredPosition: {x: -315, y: 276}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304224436
@@ -6801,7 +6801,7 @@ PrefabInstance:
     - target: {fileID: 5541512848059081563, guid: 2b92af77a61ba254aa6353ae61f396cb,
         type: 3}
       propertyPath: m_Name
-      value: FifthFinger
+      value: FifthFinger_Vib
       objectReference: {fileID: 0}
     - target: {fileID: 5541512848059081563, guid: 2b92af77a61ba254aa6353ae61f396cb,
         type: 3}
@@ -7372,7 +7372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388416165}
   m_LocalRotation: {x: -0, y: -0.07185155, z: -0, w: 0.99741536}
-  m_LocalPosition: {x: 24.31, y: 1.43, z: -5.55}
+  m_LocalPosition: {x: 23.64, y: 1.43, z: -1.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7626,8 +7626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83a3657308c74146994af9fbc4dd79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vibrolevel: 0
-  fbb_feedback: 0
 --- !u!1 &389449873
 GameObject:
   m_ObjectHideFlags: 0
@@ -9147,7 +9145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187, y: 201}
+  m_AnchoredPosition: {x: -314, y: 265}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471818211
@@ -9880,6 +9878,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504162120}
   m_CullTransparentMesh: 0
+--- !u!114 &510479392 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -7450939016958581497, guid: 2b92af77a61ba254aa6353ae61f396cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 335908101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2dd79269a9ffd4b8dcce0c098383f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &510509289
 GameObject:
   m_ObjectHideFlags: 0
@@ -10945,7 +10955,7 @@ PrefabInstance:
     - target: {fileID: 5541512848059081563, guid: 2b92af77a61ba254aa6353ae61f396cb,
         type: 3}
       propertyPath: m_Name
-      value: FirstFinger
+      value: FirstFinger_Vib
       objectReference: {fileID: 0}
     - target: {fileID: 5541512848293220076, guid: 2b92af77a61ba254aa6353ae61f396cb,
         type: 3}
@@ -12442,7 +12452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643113689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.87, y: 1.73, z: -2.19}
+  m_LocalPosition: {x: 24.87, y: 1.73, z: -1.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13568,6 +13578,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718422937}
   m_CullTransparentMesh: 0
+--- !u!114 &719772261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -7450939016958581497, guid: 2b92af77a61ba254aa6353ae61f396cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 570193846}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2dd79269a9ffd4b8dcce0c098383f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &734595926
 GameObject:
   m_ObjectHideFlags: 0
@@ -19262,6 +19284,7 @@ GameObject:
   - component: {fileID: 1067800305}
   - component: {fileID: 1067800307}
   - component: {fileID: 1067800308}
+  - component: {fileID: 1067800309}
   m_Layer: 0
   m_Name: GamePannel
   m_TagString: Untagged
@@ -19303,7 +19326,8 @@ MonoBehaviour:
   - {fileID: 1304218295}
   - {fileID: 990349378}
   _menuPanel: {fileID: 1007346614}
-  Feedback: {fileID: 1067800308}
+  Feedback_fbb: {fileID: 1067800308}
+  Feedback_vib: {fileID: 1067800309}
   Settings: {fileID: 1067800306}
 --- !u!95 &1067800305
 Animator:
@@ -19373,6 +19397,24 @@ MonoBehaviour:
   - {fileID: 1855848672}
   - {fileID: 1006636895}
   - {fileID: 640091379}
+--- !u!114 &1067800309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067800302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db4f7058e0d5484a9145a3e70d2cb31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliders:
+  - {fileID: 719772261}
+  - {fileID: 1980396163}
+  - {fileID: 1777901208}
+  - {fileID: 1451622822}
+  - {fileID: 510479392}
 --- !u!1 &1070209343
 GameObject:
   m_ObjectHideFlags: 0
@@ -19984,7 +20026,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: VIB Back Fingers
+  m_text: Vibration  Fingers
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21408,7 +21450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -184, y: 201}
+  m_AnchoredPosition: {x: -311, y: 222}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1183933486
@@ -26019,9 +26061,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1067800308}
-        m_TargetAssemblyTypeName: C_Feedback, Assembly-CSharp
-        m_MethodName: SaveSliderValues
+      - m_Target: {fileID: 1067800304}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: Save_Nenu_Manager_Setting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27809,7 +27851,7 @@ PrefabInstance:
     - target: {fileID: 5541512848059081563, guid: 2b92af77a61ba254aa6353ae61f396cb,
         type: 3}
       propertyPath: m_Name
-      value: FouthFinger
+      value: FouthFinger_Vib
       objectReference: {fileID: 0}
     - target: {fileID: 5541512848293220076, guid: 2b92af77a61ba254aa6353ae61f396cb,
         type: 3}
@@ -27839,6 +27881,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1451622820}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1451622822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -7450939016958581497, guid: 2b92af77a61ba254aa6353ae61f396cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1451622820}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2dd79269a9ffd4b8dcce0c098383f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1471430184
 GameObject:
   m_ObjectHideFlags: 0
@@ -28710,7 +28764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -378, y: 201}
+  m_AnchoredPosition: {x: -314, y: 201}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505152266
@@ -33280,7 +33334,7 @@ PrefabInstance:
     - target: {fileID: 5541512848059081563, guid: 2b92af77a61ba254aa6353ae61f396cb,
         type: 3}
       propertyPath: m_Name
-      value: ThirdFinger
+      value: ThirdFinger_Vib
       objectReference: {fileID: 0}
     - target: {fileID: 5541512848293220076, guid: 2b92af77a61ba254aa6353ae61f396cb,
         type: 3}
@@ -33310,6 +33364,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1777901206}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1777901208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -7450939016958581497, guid: 2b92af77a61ba254aa6353ae61f396cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1777901206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2dd79269a9ffd4b8dcce0c098383f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1788356486
 GameObject:
   m_ObjectHideFlags: 0
@@ -37159,7 +37225,7 @@ PrefabInstance:
     - target: {fileID: 5541512848059081563, guid: 2b92af77a61ba254aa6353ae61f396cb,
         type: 3}
       propertyPath: m_Name
-      value: SecondFinger
+      value: SecondFinger_Vib
       objectReference: {fileID: 0}
     - target: {fileID: 5541512848293220076, guid: 2b92af77a61ba254aa6353ae61f396cb,
         type: 3}
@@ -37189,6 +37255,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1980396161}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1980396163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -7450939016958581497, guid: 2b92af77a61ba254aa6353ae61f396cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1980396161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2dd79269a9ffd4b8dcce0c098383f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1995526709
 GameObject:
   m_ObjectHideFlags: 0
@@ -38460,7 +38538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2062743272}
   m_Layer: 0
-  m_Name: Test_Gloves
+  m_Name: Test_Gloves_Vib
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

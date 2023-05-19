@@ -5,6 +5,7 @@ using System;
 
 using Assets._scripts.Entities;
 using UnityEngine.SceneManagement;
+using static ModelsPreferences.M_Gloves;
 
 public enum Menu_Animation
     {
@@ -21,7 +22,9 @@ public enum Menu_Animation
 
     public Navigated_Pannel[] _list_Panels;
     public GameObject _menuPanel;
-    public C_Feedback Feedback;
+    public C_Feedback Feedback_fbb;
+    public C_Feedback Feedback_vib;
+
     /// <summary>
     /// Gamge setting that is responsible on saving the preferences 
     /// </summary>
@@ -105,8 +108,8 @@ public enum Menu_Animation
     {
      
         Settings.Set_Settings_view();
-        Feedback.LoadSliderValues_View();
-
+        Feedback_fbb.LoadSliderValues_View(GLOVES_FEEDBACK_PREF.FBB_FEEDBACK);
+        Feedback_vib.LoadSliderValues_View(GLOVES_FEEDBACK_PREF.VIBRATION_FEEDBACK);
         Debug.Log("Settings are updated");
 
     }
@@ -117,7 +120,8 @@ public enum Menu_Animation
     public void Save_Nenu_Manager_Setting()
     {
         Settings.Update_Settings();
-        Feedback.SaveSliderValues();
+        Feedback_fbb.SaveSliderValues(GLOVES_FEEDBACK_PREF.FBB_FEEDBACK);
+        Feedback_vib.SaveSliderValues(GLOVES_FEEDBACK_PREF.VIBRATION_FEEDBACK);
 
     }
 
